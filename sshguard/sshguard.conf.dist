@@ -1,6 +1,6 @@
 #### REQUIRED CONFIGURATION ####
 # Full path to backend executable (required, no default)
-BACKEND="/usr/libexec/sshguard/sshg-fw-nft-sets"
+BACKEND="/usr/lib/sshguard/sshg-fw-nft-sets"
 
 # Shell command that provides logs on standard output. (optional, no default)
 # Example 1: ssh and sendmail from systemd journal:
