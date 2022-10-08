@@ -4,5 +4,5 @@
 # Address blocks in CIDR notation
 127.0.0.0/8
 ::1/128
-http://mrt.uclllabs.be/
+195.130.131.4
 193.191.177.207
