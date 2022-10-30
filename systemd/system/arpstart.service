@@ -1,0 +1,8 @@
+[Unit]
+Description= start_arp
+
+[Service]
+ExecStart=/bin/bash /etc/rc.local start
+
+[Install]
+WantedBy=multi-user.target
