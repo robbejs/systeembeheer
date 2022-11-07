@@ -1,0 +1,22 @@
+#!/bin/bash
+
+if [ "$EUID" -ne 0 ];then
+  echo "Not executed as root"
+  exit 0
+fi
+
+if [ "$1" == "-t" ]; then	
+  if [ "$2" == "CNAME" ]; then
+    FILE="'/etc/zones/db.$4'"
+    echo "$3\tIN\tCNAME\t$4" >> /etc/bind/zones/db.$FILE
+  elif [ "$2" == "A" ]; then
+    FILE="'/etc/zones/db.$5'"
+    echo "$3\tIN\tA\t$4" >> /etc/bind/zones/db.$FILE
+  elif [ "$2" == "MX" ]; then
+    FILE="'/etc/zones/db.$5'"
+    echo "@\tIN\tMX\t$3.$5." >> /etc/bind/zones/db.$FILE
+    echo "$3\tIN\tA\t$4" >> /etc/bind/zones/db.$FILE
+  fi
+else
+  echo "done" 
+fi
