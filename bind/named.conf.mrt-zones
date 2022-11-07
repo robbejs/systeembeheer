@@ -1,0 +1,5 @@
+
+zone "foobar.robbe-jacobs1.sb.uclllabs.be" {
+	type master;
+	file "/etc/bind/zones/db.foobar";
+};
