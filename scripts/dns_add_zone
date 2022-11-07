@@ -1,0 +1,41 @@
+#!/bin/bash
+
+if [ "$EUID" -ne 0 ]
+  then echo "Run script as root!"
+  exit 0
+fi
+
+
+if [[ "$1" != "" ]]; then
+  FILE="$1"
+else
+  echo "Missing argument"
+  exit 0
+fi
+
+sameFile=$(ls /etc/bind/zones | grep "db.$FILE")
+if [[ "$sameFile" == "db.$FILE" ]]; then
+	echo "A zone with this name already exists"
+	exit 0
+fi
+
+touch $(echo "/etc/bind/zones/db.$FILE")
+
+echo "$TTL    604800
+@       IN      SOA     ns.$FILE.robbe-jacobs1.sb.uclllabs.be. r0756798.ucll.be. (
+		0	; Serial
+	   604800	; Refresh
+	    86400	; Retry
+	  2419200	; Expire
+           604800 )	; Negative Cache TTL
+	   
+@		IN	NS	ns.robbe-jacobs1.sb.uclllabs.be." > /etc/bind/zones/db.$1
+echo "$1	IN	NS	ns.robbe-jacobs1.sb.uclllabs.be." >> /etc/bind/zones/db.robbe-jacobs1.sb.uclllabs.be
+echo "$FILE	IN	A	193.191.177.162" >> /etc/bind/zones/db.robbe-jacobs1.sb.uclllabs.be
+
+echo "zone \"$FILE.robbe-jacobs1.sb.uclllabs.be\" {
+	type master;
+	file \"/etc/bind/zones/db.$FILE\";
+};" >> /etc/bind/named.conf.mrt-zones
+
+systemctl restart bind9.service
