@@ -1,0 +1,9 @@
+    604800
+@       IN      SOA     ns.foobar.robbe-jacobs1.sb.uclllabs.be. r0756798.ucll.be. (
+		0	; Serial
+	   604800	; Refresh
+	    86400	; Retry
+	  2419200	; Expire
+           604800 )	; Negative Cache TTL
+	   
+@		IN	NS	ns.robbe-jacobs1.sb.uclllabs.be.
