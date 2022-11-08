@@ -5,37 +5,48 @@ if [ "$EUID" -ne 0 ]
   exit 0
 fi
 
-
-if [[ "$1" != "" ]]; then
+if [ -n "$1" ]; then
   FILE="$1"
-else
-  echo "Missing argument"
-  exit 0
-fi
-
-sameFile=$(ls /etc/bind/zones | grep "db.$FILE")
-if [[ "$sameFile" == "db.$FILE" ]]; then
-	echo "A zone with this name already exists"
+  sameFile=$(ls /etc/bind/zones | grep "db.$FILE.robbe-jacobs1.sb.uclllabs.be")
+  if [[ "$sameFile" == "db.$FILE" ]]; then
+  	echo "A zone with this name already exists"
 	exit 0
-fi
+  fi
 
-touch $(echo "/etc/bind/zones/db.$FILE")
+  touch $(echo "/etc/bind/zones/db.$FILE.robbe-jacobs1.sb.uclllabs.be")
 
-echo "$TTL    604800
-@       IN      SOA     ns.$FILE.robbe-jacobs1.sb.uclllabs.be. r0756798.ucll.be. (
-		0	; Serial
-	   604800	; Refresh
-	    86400	; Retry
-	  2419200	; Expire
+  echo "\$TTL    4800
+@       IN      SOA     ns.$FILE.robbe-jacobs1.sb.uclllabs.be. root.$FILE.robbe-jacobs1.sb.uclllabs.be. (
+  		1	; Serial
+ 	   604800	; Refresh
+	      600	; Retry
+	      600	; Expire
            604800 )	; Negative Cache TTL
 	   
-@		IN	NS	ns.robbe-jacobs1.sb.uclllabs.be." > /etc/bind/zones/db.$1
-echo "$1	IN	NS	ns.robbe-jacobs1.sb.uclllabs.be." >> /etc/bind/zones/db.robbe-jacobs1.sb.uclllabs.be
-echo "$FILE	IN	A	193.191.177.162" >> /etc/bind/zones/db.robbe-jacobs1.sb.uclllabs.be
+@	IN	NS	ns.robbe-jacobs1.sb.uclllabs.be.
+@	IN	NS	ns.$FILE.robbe-jacobs1.sb.uclllabs.be.
 
-echo "zone \"$FILE.robbe-jacobs1.sb.uclllabs.be\" {
+ns	IN	A	193.191.177.207
+@	IN	A	193.191.177.207" > /etc/bind/zones/db.$FILE.robbe-jacobs1.sb.uclllabs.be
+
+
+  echo "$1	IN	NS	ns.robbe-jacobs1.sb.uclllabs.be." >> /etc/bind/zones/db.robbe-jacobs1.sb.uclllabs.be
+
+  echo "zone \"$FILE.robbe-jacobs1.sb.uclllabs.be\" {
 	type master;
-	file \"/etc/bind/zones/db.$FILE\";
-};" >> /etc/bind/named.conf.mrt-zones
+	file \"/etc/bind/zones/db.$FILE.robbe-jacobs1.sb.uclllabs.be\";
+  };" >> /etc/bind/named.conf.mrt-zones
 
-systemctl restart bind9.service
+  serialline=$(grep "Serial" /etc/bind/zones/db.robbe-jacobs1.sb.uclllabs.be)
+  serialnumber=$(echo $serialline | cut -d \; -f 1)
+  ((serialnumber++))
+  newserial="$serialnumber	; Serial"
+  echo $newserial;
+  sed -i "s/.*Serial.*/\t\t\t	$newserial/g" /etc/bind/zones/db.robbe-jacobs1.sb.uclllabs.be
+
+  rndc reload
+  systemctl restart bind9
+else
+  echo "no variables given"
+  exit 0
+fi	
