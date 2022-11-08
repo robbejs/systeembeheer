@@ -10,9 +10,9 @@ options {
 	// Uncomment the following block, and insert the addresses replacing 
 	// the all-0's placeholder.
 
-	 forwarders {
-	 	8.8.8.8;
-	 };
+	 //forwarders {
+	 //	8.8.8.8;
+	 //};
 
 
 	//========================================================================
@@ -20,6 +20,10 @@ options {
 	// you will need to update your keys.  See https://www.isc.org/bind-keys
 	//========================================================================
 	dnssec-validation auto;
-
 	listen-on-v6 { any; };
+	version "not currently available";
+	recursion no;
+	listen-on { 193.191.177.207; };
+	notify yes;
+	allow-transfer { 193.191.176.254; 193.191.177.4; };	
 };
