@@ -46,6 +46,7 @@ check   ALL=(ALL) NOPASSWD: /usr/lib/nagios/plugins/check_apt
 check   ALL=(ALL) NOPASSWD: /usr/sbin/arp
 check   ALL=(ALL) NOPASSWD: /usr/bin/dns_add_zone
 check   ALL=(ALL) NOPASSWD: /usr/bin/dns_add_record
+check   ALL=(ALL) NOPASSWD: /usr/bin/http_add_vhost
 # Members of the admin group may gain root privileges
 %admin ALL=(ALL) ALL
 
