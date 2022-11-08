@@ -19,3 +19,7 @@ zone "subzonecooya4.robbe-jacobs1.sb.uclllabs.be" {
 	type master;
 	file "/etc/bind/zones/db.subzonecooya4.robbe-jacobs1.sb.uclllabs.be";
   };
+zone "subzonemooc9x.robbe-jacobs1.sb.uclllabs.be" {
+	type master;
+	file "/etc/bind/zones/db.subzonemooc9x.robbe-jacobs1.sb.uclllabs.be";
+  };
