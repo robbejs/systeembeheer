@@ -27,11 +27,10 @@ else
   echo "no variables given"
   exit 0
 fi	
-serialline=$(grep "Serial" "$FILE")
-serialnumber=$(echo $serialline | cut -d \; -f 1)
-((serialnumber++))
-newserial="$serialnumber         ; Serial"
-echo $newserial;
+serial=$(grep "Serial" "$FILE")
+count=$(echo $serial | cut -d \; -f 1)
+((count++))
+newserial="$count         ; Serial"
 sed -i "s/.*Serial.*/\t\t\t     $newserial/g" "$FILE"
 
 rndc reload

@@ -37,11 +37,10 @@ ns	IN	A	193.191.177.207
 	file \"/etc/bind/zones/db.$FILE.robbe-jacobs1.sb.uclllabs.be\";
   };" >> /etc/bind/named.conf.mrt-zones
 
-  serialline=$(grep "Serial" /etc/bind/zones/db.robbe-jacobs1.sb.uclllabs.be)
-  serialnumber=$(echo $serialline | cut -d \; -f 1)
-  ((serialnumber++))
-  newserial="$serialnumber	; Serial"
-  echo $newserial;
+  serial=$(grep "Serial" /etc/bind/zones/db.robbe-jacobs1.sb.uclllabs.be)
+  count=$(echo $serial | cut -d \; -f 1)
+  ((count++))
+  newserial="$count	; Serial"
   sed -i "s/.*Serial.*/\t\t\t	$newserial/g" /etc/bind/zones/db.robbe-jacobs1.sb.uclllabs.be
 
   rndc reload
