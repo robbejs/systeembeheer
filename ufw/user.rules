@@ -26,6 +26,20 @@
 ### tuple ### allow tcp 22 0.0.0.0/0 any 0.0.0.0/0 OpenSSH - in
 -A ufw-user-input -p tcp --dport 22 -j ACCEPT -m comment --comment 'dapp_OpenSSH'
 
+### tuple ### allow any 53 0.0.0.0/0 any 0.0.0.0/0 Bind9 - in
+-A ufw-user-input -p tcp --dport 53 -j ACCEPT -m comment --comment 'dapp_Bind9'
+-A ufw-user-input -p udp --dport 53 -j ACCEPT -m comment --comment 'dapp_Bind9'
+
+### tuple ### allow udp 123 0.0.0.0/0 any 0.0.0.0/0 in
+-A ufw-user-input -p udp --dport 123 -j ACCEPT
+
+### tuple ### allow udp 123 0.0.0.0/0 any 0.0.0.0/0 out
+-A ufw-user-output -p udp --dport 123 -j ACCEPT
+
+### tuple ### allow any 53 0.0.0.0/0 any 0.0.0.0/0 out
+-A ufw-user-output -p tcp --dport 53 -j ACCEPT
+-A ufw-user-output -p udp --dport 53 -j ACCEPT
+
 ### END RULES ###
 
 ### LOGGING ###
