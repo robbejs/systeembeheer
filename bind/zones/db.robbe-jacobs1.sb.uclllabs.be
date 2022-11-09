@@ -1,13 +1,13 @@
 ;
 ; BIND data file for local loopback interface
 ;
-$TTL	604800
+$TTL	86400
 @	IN	SOA	robbe-jacobs1.sb.uclllabs.be. root.robbe-jacobs1.sb.uclllabs.be. (
-				2022110823	; Serial
+				2022110827	; Serial
 			 604800		; Refresh
 			  86400		; Retry
 			2419200		; Expire
-			 604800 )	; Negative Cache TTl
+			  86400  )	; Negative Cache TTl
 
 @	IN	NS	ns.robbe-jacobs1.sb.uclllabs.be.
 @	IN      NS      ns1.uclllabs.be.
@@ -17,6 +17,8 @@ ns      IN      A       193.191.177.207
 www	IN	A	193.191.177.207
 test    IN      A       193.191.177.254
 mx	IN	A	193.191.177.254
+www1	IN	A	193.191.177.207
+www2	IN	A	193.191.177.207
 
 @	IN	AAAA	::1
 foobar	IN	NS	ns.robbe-jacobs1.sb.uclllabs.be.
@@ -50,3 +52,6 @@ subzonecee7hi	IN	NS	ns.robbe-jacobs1.sb.uclllabs.be.
 subzoneeo9hei	IN	NS	ns.robbe-jacobs1.sb.uclllabs.be.
 subzoneaed9za	IN	NS	ns.robbe-jacobs1.sb.uclllabs.be.
 subzonejee3xa	IN	NS	ns.robbe-jacobs1.sb.uclllabs.be.
+subzonechae6a	IN	NS	ns.robbe-jacobs1.sb.uclllabs.be.
+subzoneli9iem	IN	NS	ns.robbe-jacobs1.sb.uclllabs.be.
+subzonedajoh4	IN	NS	ns.robbe-jacobs1.sb.uclllabs.be.
