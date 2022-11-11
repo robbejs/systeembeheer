@@ -15,13 +15,13 @@ if [ -n "$1" ]; then
 
   touch $(echo "/etc/bind/zones/db.$FILE.robbe-jacobs1.sb.uclllabs.be")
 
-  echo "\$TTL    4800
+  echo "\$TTL    300
 @       IN      SOA     ns.$FILE.robbe-jacobs1.sb.uclllabs.be. root.$FILE.robbe-jacobs1.sb.uclllabs.be. (
   		1	; Serial
- 	   604800	; Refresh
-	      600	; Retry
-	      600	; Expire
-           604800 )	; Negative Cache TTL
+ 	      300	; Refresh
+	      300	; Retry
+	   604800	; Expire
+              300 )	; Negative Cache TTL
 	   
 @	IN	NS	ns.robbe-jacobs1.sb.uclllabs.be.
 @	IN	NS	ns.$FILE.robbe-jacobs1.sb.uclllabs.be.
