@@ -3,7 +3,7 @@
 ;
 $TTL	300
 @	IN	SOA	ns.robbe-jacobs1.sb.uclllabs.be. root.robbe-jacobs1.sb.uclllabs.be. (
-			     2022110914         ; Serial
+			     2022110952         ; Serial
 			    300		; Refresh
 			    300		; Retry
 			   3000		; Expire
@@ -125,3 +125,41 @@ subzoneae2ahf	IN	NS	ns.robbe-jacobs1.sb.uclllabs.be.
 ahv5ee.subzoneae2ahf	IN	A	193.191.177.207
 subzoneieth7o	IN	NS	ns.robbe-jacobs1.sb.uclllabs.be.
 phahs7.subzoneieth7o	IN	A	193.191.177.207
+subzonemier2u	IN	NS	ns.robbe-jacobs1.sb.uclllabs.be.
+oath0b.subzonemier2u	IN	A	193.191.177.207
+subzonefai1ek	IN	NS	ns.robbe-jacobs1.sb.uclllabs.be.
+iex9wu.subzonefai1ek	IN	A	193.191.177.207
+subzonedeegh5	IN	NS	ns.robbe-jacobs1.sb.uclllabs.be.
+vah0io.subzonedeegh5	IN	A	193.191.177.207
+subzonethah0i	IN	NS	ns.robbe-jacobs1.sb.uclllabs.be.
+oosu6e.subzonethah0i	IN	A	193.191.177.207
+subzonefiewi8	IN	NS	ns.robbe-jacobs1.sb.uclllabs.be.
+ush3fu.subzonefiewi8	IN	A	193.191.177.207
+subzoneeegik1	IN	NS	ns.robbe-jacobs1.sb.uclllabs.be.
+ha2ash.subzoneeegik1	IN	A	193.191.177.207
+subzonequoh6v	IN	NS	ns.robbe-jacobs1.sb.uclllabs.be.
+ubeif6.subzonequoh6v	IN	A	193.191.177.207
+subzoneiuy6ey	IN	NS	ns.robbe-jacobs1.sb.uclllabs.be.
+wifah9.subzoneiuy6ey	IN	A	193.191.177.207
+subzonesib3ph	IN	NS	ns.robbe-jacobs1.sb.uclllabs.be.
+keig1u.subzonesib3ph	IN	A	193.191.177.207
+subzoneiex1ae	IN	NS	ns.robbe-jacobs1.sb.uclllabs.be.
+ceth8d.subzoneiex1ae	IN	A	193.191.177.207
+subzonees6cos	IN	NS	ns.robbe-jacobs1.sb.uclllabs.be.
+aerai8.subzonees6cos	IN	A	193.191.177.207
+subzoneaib6gi	IN	NS	ns.robbe-jacobs1.sb.uclllabs.be.
+nacue2.subzoneaib6gi	IN	A	193.191.177.207
+subzoneooj5te	IN	NS	ns.robbe-jacobs1.sb.uclllabs.be.
+sha0ai.subzoneooj5te	IN	A	193.191.177.207
+subzoneeeb9ya	IN	NS	ns.robbe-jacobs1.sb.uclllabs.be.
+ro0iw2.subzoneeeb9ya	IN	A	193.191.177.207
+subzoneooco9e	IN	NS	ns.robbe-jacobs1.sb.uclllabs.be.
+mui0gi.subzoneooco9e	IN	A	193.191.177.207
+subzoneanah2w	IN	NS	ns.robbe-jacobs1.sb.uclllabs.be.
+wie0ai.subzoneanah2w	IN	A	193.191.177.207
+subzoneekang9	IN	NS	ns.robbe-jacobs1.sb.uclllabs.be.
+zoe9no.subzoneekang9	IN	A	193.191.177.207
+subzoneau9eib	IN	NS	ns.robbe-jacobs1.sb.uclllabs.be.
+thei9y.subzoneau9eib	IN	A	193.191.177.207
+subzoneli6qui	IN	NS	ns.robbe-jacobs1.sb.uclllabs.be.
+ieta0j.subzoneli6qui	IN	A	193.191.177.207
