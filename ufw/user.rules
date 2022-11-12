@@ -40,6 +40,21 @@
 -A ufw-user-output -p tcp --dport 53 -j ACCEPT
 -A ufw-user-output -p udp --dport 53 -j ACCEPT
 
+### tuple ### allow any 3306 0.0.0.0/0 any 0.0.0.0/0 in
+-A ufw-user-input -p tcp --dport 3306 -j ACCEPT
+-A ufw-user-input -p udp --dport 3306 -j ACCEPT
+
+### tuple ### allow any 3306 0.0.0.0/0 any 193.191.177.1 in
+-A ufw-user-input -p tcp --dport 3306 -s 193.191.177.1 -j ACCEPT
+-A ufw-user-input -p udp --dport 3306 -s 193.191.177.1 -j ACCEPT
+
+### tuple ### allow any 3306 0.0.0.0/0 any 193.191.177.6 in
+-A ufw-user-input -p tcp --dport 3306 -s 193.191.177.6 -j ACCEPT
+-A ufw-user-input -p udp --dport 3306 -s 193.191.177.6 -j ACCEPT
+
+### tuple ### allow tcp 80 0.0.0.0/0 any 0.0.0.0/0 Apache - in
+-A ufw-user-input -p tcp --dport 80 -j ACCEPT -m comment --comment 'dapp_Apache'
+
 ### END RULES ###
 
 ### LOGGING ###
