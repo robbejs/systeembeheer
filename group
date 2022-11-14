@@ -6,7 +6,7 @@ adm:x:4:syslog
 tty:x:5:
 disk:x:6:
 lp:x:7:
-mail:x:8:
+mail:x:8:root
 news:x:9:
 uucp:x:10:
 man:x:12:
@@ -59,4 +59,5 @@ incron:x:118:
 ntp:x:119:
 bind:x:120:
 mysql:x:121:
-virtualmail:x:2000:
+user1:x:1001:
+vmail:x:2000:
