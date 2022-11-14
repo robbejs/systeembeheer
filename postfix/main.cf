@@ -2,20 +2,26 @@
 
 smtpd_banner = $myhostname ESMTP $mail_name (Debian/GNU)
 biff = no
-
+myhostname = robbe-jacobs1
 # appending .domain is the MUA's job.
 append_dot_mydomain = no
 
 # Uncomment the next line to generate "delayed mail" warnings
 #delay_warning_time = 4h
 
-alias_maps = hash:/etc/aliases
-alias_database = hash:/etc/aliases
+#alias_maps = hash:/etc/aliases
+#alias_database = hash:/etc/aliases
 mydestination = $myhostname, localhost.$mydomain, localhost
 relayhost = 
-mynetworks = 127.0.0.0/8
-inet_interfaces = loopback-only
+mynetworks = 127.0.0.0/8, 193.191.177.0/24
+inet_interfaces = all
 recipient_delimiter = +
 
 compatibility_level = 2
 
+virtual_mailbox_domains = robbe-jacobs1
+virtual_mailbox_base = /home/virtualmailboxes
+virtual_mailbox_maps = hash:/etc/postfix/virtualmaps
+virtual_minimum_uid = 500
+virtual_uid_maps = static:2000
+virtual_gid_maps = static:2000
