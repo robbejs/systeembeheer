@@ -32,4 +32,5 @@ bind:x:111:120::/var/cache/bind:/usr/sbin/nologin
 mysql:x:112:121:MySQL Server,,,:/nonexistent:/bin/false
 vmail:x:2000:2000::/var/vmail/:/bin/sh
 dovecot:x:113:122:Dovecot mail server,,,:/usr/lib/dovecot:/usr/sbin/nologin
-dovenull:x:114:123::/nonexistent:/usr/sbin/nologin
+dovenull:x:114:123:Dovecot login user,,,:/nonexistent:/usr/sbin/nologin
+user1:x:1001:1001::/home/user1:/bin/bash

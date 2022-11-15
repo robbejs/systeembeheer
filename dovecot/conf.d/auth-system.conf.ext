@@ -8,10 +8,12 @@
 # REMEMBER: You'll need /etc/pam.d/dovecot file created for PAM
 # authentication to actually work. <doc/wiki/PasswordDatabase.PAM.txt>
 passdb {
-  driver = pam
+  driver = passwd-file
   # [session=yes] [setcred=yes] [failure_show_msg=yes] [max_requests=<n>]
   # [cache_key=<key>] [<service name>]
-  #args = dovecot
+  args = /etc/dovecot/passwd
+  master = yes
+  pass = yes
 }
 
 # System users (NSS, /etc/passwd, or similar).
