@@ -31,5 +31,6 @@ ntp:*:19293:0:99999:7:::
 bind:*:19299:0:99999:7:::
 mysql:!:19308:0:99999:7:::
 vmail:!:19310:0:99999:7:::
-dovecot:*:19310:0:99999:7:::
 dovenull:*:19310:0:99999:7:::
+stunnel4:!*:19312::::::
+user1:$y$j9T$x0Syk4ugt/jdFYjYY6e1.1$IGsS9yrDQPEzHbyconeAs2YUD2W./fzMBUwHtgiqzz5:19312:0:99999:7:::
