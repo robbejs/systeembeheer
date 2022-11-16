@@ -75,6 +75,12 @@
 ### tuple ### allow tcp 993 0.0.0.0/0 any 0.0.0.0/0 Dovecot%20Secure%20IMAP - in
 -A ufw-user-input -p tcp --dport 993 -j ACCEPT -m comment --comment 'dapp_Dovecot%20Secure%20IMAP'
 
+### tuple ### allow tcp 110 0.0.0.0/0 any 0.0.0.0/0 Dovecot%20POP3 - in
+-A ufw-user-input -p tcp --dport 110 -j ACCEPT -m comment --comment 'dapp_Dovecot%20POP3'
+
+### tuple ### allow tcp 995 0.0.0.0/0 any 0.0.0.0/0 Dovecot%20Secure%20POP3 - in
+-A ufw-user-input -p tcp --dport 995 -j ACCEPT -m comment --comment 'dapp_Dovecot%20Secure%20POP3'
+
 ### END RULES ###
 
 ### LOGGING ###
