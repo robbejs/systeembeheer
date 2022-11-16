@@ -60,6 +60,6 @@ ntp:x:119:
 bind:x:120:
 mysql:x:121:
 vmail:x:2000:user1
-dovenull:x:123:
 stunnel4:x:999:stunnel4
 user1:x:2001:
+dovecot:x:122:

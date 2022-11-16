@@ -31,6 +31,7 @@ ntp:x:110:119::/nonexistent:/usr/sbin/nologin
 bind:x:111:120::/var/cache/bind:/usr/sbin/nologin
 mysql:x:112:121:MySQL Server,,,:/nonexistent:/bin/false
 vmail:x:2000:2000::/var/vmail/:/bin/sh
-dovenull:x:114:123:Dovecot login user,,,:/nonexistent:/usr/sbin/nologin
 stunnel4:x:999:999:stunnel service system account:/var/run/stunnel4:/usr/sbin/nologin
 user1:x:2001:2001::/var/vmail:/bin/sh
+dovecot:x:113:122:Dovecot mail server,,,:/usr/lib/dovecot:/usr/sbin/nologin
+dovenull:x:114:123::/nonexistent:/usr/sbin/nologin
