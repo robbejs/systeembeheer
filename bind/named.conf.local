@@ -8,9 +8,10 @@ zone "robbe-jacobs1.sb.uclllabs.be" {
     type master;
     file "/etc/bind/zones/db.robbe-jacobs1.sb.uclllabs.be";
     allow-transfer {
-	193.191.177.254; // mrt
-	193.191.176.254; // ns1.uclllabs.be
-	193.191.177.4; // ns2.uclllabs.be
+	193.191.177.254;
+	193.191.176.254;
+	193.191.177.4;
+	193.191.177.187;
     };
     notify yes;
 };
