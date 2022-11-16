@@ -52,15 +52,22 @@
 -A ufw-user-input -p tcp --dport 3306 -s 193.191.177.6 -j ACCEPT
 -A ufw-user-input -p udp --dport 3306 -s 193.191.177.6 -j ACCEPT
 
-### tuple ### allow tcp 80 0.0.0.0/0 any 0.0.0.0/0 Apache - in
--A ufw-user-input -p tcp --dport 80 -j ACCEPT -m comment --comment 'dapp_Apache'
-
 ### tuple ### allow tcp 25 0.0.0.0/0 any 0.0.0.0/0 in
 -A ufw-user-input -p tcp --dport 25 -j ACCEPT
 
 ### tuple ### allow any 993 0.0.0.0/0 any 0.0.0.0/0 in
 -A ufw-user-input -p tcp --dport 993 -j ACCEPT
 -A ufw-user-input -p udp --dport 993 -j ACCEPT
+
+### tuple ### allow any 443 0.0.0.0/0 any 0.0.0.0/0 in
+-A ufw-user-input -p tcp --dport 443 -j ACCEPT
+-A ufw-user-input -p udp --dport 443 -j ACCEPT
+
+### tuple ### allow tcp 443 0.0.0.0/0 any 0.0.0.0/0 Apache%20Secure - in
+-A ufw-user-input -p tcp --dport 443 -j ACCEPT -m comment --comment 'dapp_Apache%20Secure'
+
+### tuple ### allow tcp 80 0.0.0.0/0 any 0.0.0.0/0 in
+-A ufw-user-input -p tcp --dport 80 -j ACCEPT
 
 ### END RULES ###
 
