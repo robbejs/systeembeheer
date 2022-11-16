@@ -3,7 +3,7 @@
 ;
 $TTL	60
 @	IN	SOA	ns.robbe-jacobs1.sb.uclllabs.be. root.robbe-jacobs1.sb.uclllabs.be. (
-			     2022111525         ; Serial
+			     2022111536         ; Serial
 				60	; Refresh
 				60	; Retry
 				4000         ; Expire
@@ -20,6 +20,12 @@ test	IN	A	193.191.177.254
 mx	IN	A	193.191.177.207
 www1	IN	A	193.191.177.207
 www2	IN	A	193.191.177.207
+secure	IN	A	193.191.177.207
+supersecure	IN	A	193.191.177.207
+
+
+_acme-challenge.secure.robbe-jacobs1.sb.uclllabs.be.	300	IN	TXT	"NgzF1qjQwBK6LUZpvoJxq2nPU9Qycq1UJLtgG87odYI"
+_acme-challenge.supersecure.robbe-jacobs1.sb.uclllabs.be.	300	IN	TXT	"e0f2QiLewot3RYBewP7RnlOliiN1mnFDy3nE9SKYoYo"	
 
 @	IN	AAAA	::1
 @	IN	MX	10	mx.robbe-jacobs1.sb.uclllabs.be.
@@ -50,3 +56,8 @@ subzoneop6to4	IN	NS	ns.robbe-jacobs1.sb.uclllabs.be.
 gie2ae.subzoneop6to4	IN	A	193.191.177.207
 subzoneohch2z	IN	NS	ns.robbe-jacobs1.sb.uclllabs.be.
 eeg3ca.subzoneohch2z	IN	A	193.191.177.207
+ep5ooz.subzonewoh5oh	IN	A	193.191.177.207
+subzonegata2k	IN	NS	ns.robbe-jacobs1.sb.uclllabs.be.
+ied5ur.subzonegata2k	IN	A	193.191.177.207
+subzoneko0oot	IN	NS	ns.robbe-jacobs1.sb.uclllabs.be.
+koox4o.subzoneko0oot	IN	A	193.191.177.207
