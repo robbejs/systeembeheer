@@ -3,10 +3,8 @@
 # <doc/wiki/AuthDatabase.SQL.txt>
 
 passdb {
-  driver = sql
-
-  # Path for SQL configuration file, see example-config/dovecot-sql.conf.ext
-  args = /etc/dovecot/dovecot-sql.conf.ext
+  driver = passwd-file
+  args = /etc/dovecot/passwd
 }
 
 # "prefetch" user database means that the passdb already provided the
@@ -17,8 +15,8 @@ passdb {
 #}
 
 userdb {
-  driver = sql
-  args = /etc/dovecot/dovecot-sql.conf.ext
+  driver = static
+  args = uid=vmail gid=vmail home=/var/vmail/%d/%n
 }
 
 # If you don't have any user-specific settings, you can avoid the user_query
