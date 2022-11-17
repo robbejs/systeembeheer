@@ -6,7 +6,7 @@ adm:*::syslog
 tty:*::
 disk:*::
 lp:*::
-mail:*::root
+mail:*::root,user1
 news:*::
 uucp:*::
 man:*::
@@ -59,7 +59,7 @@ incron:!::
 ntp:!::
 bind:!::
 mysql:!::
-vmail:!::
+vmail:!::user1
 stunnel4:!*::stunnel4
 dovecot:!::
 dovenull:!::
