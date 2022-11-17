@@ -3,7 +3,7 @@
 ;
 $TTL	60
 @	IN	SOA	ns.robbe-jacobs1.sb.uclllabs.be. root.robbe-jacobs1.sb.uclllabs.be. (
-			     2022111578         ; Serial
+			     2022111584         ; Serial
 				60	; Refresh
 				60	; Retry
 				4000         ; Expire
@@ -104,3 +104,9 @@ subzonexahv4v	IN	NS	ns.robbe-jacobs1.sb.uclllabs.be.
 eejaz9.subzonexahv4v	IN	A	193.191.177.207
 subzoneeixei6	IN	NS	ns.robbe-jacobs1.sb.uclllabs.be.
 eijai5.subzoneeixei6	IN	A	193.191.177.207
+subzonepahch4	IN	NS	ns.robbe-jacobs1.sb.uclllabs.be.
+ohk3oo.subzonepahch4	IN	A	193.191.177.207
+subzoneanoo3c	IN	NS	ns.robbe-jacobs1.sb.uclllabs.be.
+vecae2.subzoneanoo3c	IN	A	193.191.177.207
+subzonezee8la	IN	NS	ns.robbe-jacobs1.sb.uclllabs.be.
+oqu9sh.subzonezee8la	IN	A	193.191.177.207

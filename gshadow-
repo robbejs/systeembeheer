@@ -63,4 +63,4 @@ vmail:!::user1
 stunnel4:!*::stunnel4
 dovecot:!::
 dovenull:!::
-user1:!::
+user1:!::user1

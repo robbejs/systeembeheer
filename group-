@@ -63,4 +63,4 @@ vmail:x:2000:user1
 stunnel4:x:999:stunnel4
 dovecot:x:122:
 dovenull:x:123:
-user1:x:2001:
+user1:x:2001:user1
