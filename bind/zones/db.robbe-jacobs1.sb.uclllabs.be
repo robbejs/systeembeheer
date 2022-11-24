@@ -3,7 +3,7 @@
 ;
 $TTL	60
 @	IN	SOA	ns.robbe-jacobs1.sb.uclllabs.be. root.robbe-jacobs1.sb.uclllabs.be. (
-			     2022111926         ; Serial
+			     2022111929         ; Serial
 				60	; Refresh
 				60	; Retry
 				4000         ; Expire
@@ -25,12 +25,12 @@ secure	IN	A	193.191.177.207
 supersecure	IN	A	193.191.177.207
 mail	IN	A	193.191.177.207
 
-
+@	IN	AAAA	2001:6a8:2880:a077::CF
+ns	IN	AAAA	2001:6a8:2880:a077::CF
 
 _acme-challenge.secure.robbe-jacobs1.sb.uclllabs.be.	300	IN	TXT	"NgzF1qjQwBK6LUZpvoJxq2nPU9Qycq1UJLtgG87odYI"
 _acme-challenge.supersecure.robbe-jacobs1.sb.uclllabs.be.	300	IN	TXT	"e0f2QiLewot3RYBewP7RnlOliiN1mnFDy3nE9SKYoYo"	
 
-@	IN	AAAA	::1
 @	IN	MX	10	mx.robbe-jacobs1.sb.uclllabs.be.
 chon1h.subzonecheib9	IN	A	193.191.177.207
 foobar	IN	NS	ns.robbe-jacobs1.sb.uclllabs.be.
