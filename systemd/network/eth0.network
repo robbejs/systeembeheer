@@ -3,13 +3,20 @@ Name = eth0
 
 [Network]
 Description = Interface eth0 autoconfigured by PVE
+DHCP = no
+
+[Address]
+Label = static-ipv4
 Address = 193.191.177.207/25
-#Gateway = 193.191.177.254
-DHCP = ipv6
-IPv6AcceptRA = true
-Address = 2001:6a8:2880:a077::CF/64
-#Gateway = 2001:6a8:2880:a077::1
+
+[Address]
+Label = static-ipv6
+Address = 2001:6a8:2880:a077::cf/64
 
 [Route]
 Gateway = 2001:6a8:2880:a077::1
-GatewayOnlink = yes
+GatewayOnLink=yes
+
+[Route]
+Gateway = 193.191.177.254
+GatewayOnLink=yes
