@@ -63,3 +63,4 @@ vmail:x:2000:
 stunnel4:x:999:stunnel4
 dovecot:x:122:
 dovenull:x:123:
+wireshark:x:124:
