@@ -11,5 +11,6 @@
 #
 # By default, this script does nothing.
 
+/usr/local/sbin/firewall.sh
 arp -f /etc/ethers
 exit 0
