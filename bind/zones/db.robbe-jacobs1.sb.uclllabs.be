@@ -3,7 +3,7 @@
 ;
 $TTL    60
 @       IN      SOA     ns.robbe-jacobs1.sb.uclllabs.be. root.robbe-jacobs1.sb.uclllabs.be. (
-				2022114022	; Serial
+				2022114023	; Serial
                                 60      ; Refresh
                                 60      ; Retry
                                 4000         ; Expire
@@ -34,3 +34,4 @@ _acme-challenge.supersecure.robbe-jacobs1.sb.uclllabs.be.       300     IN      
 
 @       IN      MX      10      mx.robbe-jacobs1.sb.uclllabs.be.
 subzonethan3m	IN	NS	ns.robbe-jacobs1.sb.uclllabs.be.
+subzoneshoh8u	IN	NS	ns.robbe-jacobs1.sb.uclllabs.be.
